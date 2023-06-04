@@ -1,0 +1,223 @@
+/* Reset styling */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  background: linear-gradient(to right, #ff9, #046d04);
+  margin: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+i {
+  padding: 5px;
+}
+h2 {
+  text-align: center;
+  font-weight: bold;
+}
+.heading-4 {
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+.navbar {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+input,
+select {
+  vertical-align: middle;
+}
+section {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+body {
+  background: linear-gradient(to right, #ff9, #046d04);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* MAIN CODE */
+.seku-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.seku-logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.seku-logo h4 {
+  display: block;
+}
+
+/* Form styling */
+.form-style {
+  width: 40%;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.form-group .signup-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}

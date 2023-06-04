@@ -1,0 +1,21 @@
+.side-nav>li>img{
+	margin-left: 2rem;
+	border-radius: 50%;
+}
+.side-nav>li{
+	text-align: center;
+}
+.side-nav>li>a:active{
+	background-color: black;
+}
+.side-nav>li>a>i{
+	padding-right:1rem;
+	margin-left:-5rem;  
+}
+.side-nav>li>a>.glyphicon{
+	padding-right:1rem;
+	margin-left:-40px;  
+}
+.side-nav>li>span{
+	color:#fff;
+}

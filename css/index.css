@@ -1,0 +1,326 @@
+.carrier{
+    background-image:url('../images/seku2.jpg');
+    width:auto;
+    height:80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+	padding-top:10rem;
+}
+body{
+    background:linear-gradient(to right,#ff9,#046d04);
+	margin:auto;
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	letter-spacing: 1px;
+}
+i{
+	padding:5px;
+}
+h2{
+	text-align: center;
+	font-weight: bold;
+}
+.heading-4{
+    font-weight:bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.showcase h2{
+    font-size:50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.container-data h5{
+    font-weight:bold;
+
+}
+.showcase p{
+    font-size:18px;
+}
+
+.slider{
+    overflow: hidden;
+}
+
+.slider figure div{
+	width: 20%;
+	float: left;
+}
+
+.slider figure img{
+	width: 100%;
+    float: left;
+}
+
+.slider figure{
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 20s slidy infinite;
+}
+
+@keyframes slidy{
+	0%{
+		left: 0%
+	}
+
+	10%{
+		left: 0%;
+	}
+
+	12%{
+		left: -100%;
+	}
+
+	22%{
+		left: -100%;
+	}
+
+	24%{
+		left: -200%;
+	}
+
+	34%{
+		left: -200%;
+	}
+
+	36%{
+		left: -300%;
+	}
+
+	46%{
+		left: -300%;
+	}
+
+	48%{
+		left: -400%;
+	}
+
+	58%{
+		left: -400%;
+	}
+
+	60%{
+		left: -300%;
+	}
+
+	70%{
+		left: -300%;
+	}
+
+	72%{
+		left: -200%;
+	}
+
+	82%{
+		left: -200%;
+	}
+
+	84%{
+		left: -100%;
+	}
+
+	94%{
+		left: -100%;
+	}
+
+	96%{
+		left: 0%;
+	}
+
+	100%{
+		left: 0%;
+	}
+}
+.imagesseku{
+	float: left;
+	clear:right;
+	padding:5px;
+	padding-left:20px;
+}
+footer{
+	
+	border:2px;
+	padding:20px;
+	background:#046d04;
+	color: white;
+	
+}
+footer h3{
+	margin-top:2rem;
+	text-align:center;
+	font-size:23px;
+	font-weight:bold;
+}
+
+.flip-box{
+	
+	display:grid;
+	grid-template-columns: repeat(3,1fr);
+	margin:1em;
+	margin-right: auto;
+}
+@media(max-width:380px)
+{
+	.flip-box.flip-card-front{
+	    width:200px;
+	}
+} 
+
+.flip-card {
+	background-color: transparent;
+	width: 300px;
+	height: 300px;
+	perspective: 1000px;
+		
+	
+  }
+  
+  .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+	background-color: #bbb;
+	color: black;
+  }
+  
+  .flip-card-back {
+	background-color: #046d04;
+	color: white;
+	transform: rotateY(180deg);
+  }
+  .imgfooter{
+	  border-radius:55%;
+	  
+  }
+  .foot{
+	  position: relative;
+	  text-align:center;
+  }
+  .foot img{
+	  width: 150px;
+	  height: 150px;
+	  border-radius: 50%;
+
+  }
+
+  .images{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	
+  }
+
+  .images img{
+	  padding-top:20px;  
+  }
+
+  @media screen and (max-width:1000px){
+	.images{
+		display: grid;
+		grid-template-columns:1fr;
+		margin:auto;
+	  }
+  }
+ 
+	.images h4{
+		width:100%;
+		display:block;
+		text-align:center;
+	}
+	.bottompics{
+		display: grid;
+		grid-template-columns:1fr;
+		margin-top:20px;
+	}
+	@media(max-width:1000px){
+		.flip-box{
+			display: grid;
+		grid-template-columns:1fr;
+		margin:auto;
+		padding-left: 25px;
+		}
+		
+	}
+	.container-data{
+		text-align: center;
+		padding: 20px 30px;
+	}
+	.polaroid{
+	width:auto;
+  background-color: white;
+  margin-bottom: 25px;
+  
+	}
+	.polaroid img{
+		padding-right:20px;
+		margin-left:40px;
+	}
+	.icons i{
+		border-radius:50%;
+	}
+
+	.more-btn{
+		position: relative;
+		left: 45%;
+		margin:10px 0;
+		padding:15px 30px;
+	}
+	.content{
+		padding-left:10rem;
+		padding-top:3em;
+	}
+	.content .btn{padding:5px;
+	margin-left:2px;}
+	.content input{
+	padding:4px;
+	margin-top:3px;}
+	footer h2{margin-bottom:1px;}
+
+	/* Media queries */
+	@media screen and (max-width:1000px){
+	.content{
+		display: grid;
+		grid-template-columns:1fr;
+		margin:auto;
+		padding-right:10rem;
+		margin-left:-3rem;
+		
+
+	}
+}
+	  @media(max-width:1023px){
+	.container-data img{
+		display: grid;
+		grid-template-columns:repeat(3, 1fr);
+		margin:auto;
+		padding-right:4rem;
+	  }
+	 
+}
+	@media(max-width:1024px){
+		.polaroid-content{
+			display:grid;
+			grid-template-columns:repeat(3,1fr);
+			
+		}
+	}
+

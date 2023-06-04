@@ -1,0 +1,128 @@
+
+.carrier{
+    background-image:url('../images/seku2.jpg');
+    width:auto;
+    height:60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top:10rem;
+    margin-top:5em;
+}
+
+body{
+    background:linear-gradient(to right,#ff9,#046d04);
+    margin:auto;
+    font-family:'Source Serif Pro', serif;
+    letter-spacing: 1px;
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+.heading-4{
+    font-weight:bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+footer{
+    
+    border:2px;
+    padding:20px;
+    background:#046d04;
+    color: white;
+    
+}
+footer h3{
+    margin-top:2rem;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+}
+.container-content{
+    display:grid;
+    grid-template-columns:60% 40%;
+    padding-left:20px;
+    grid-column-gap:10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+  .foot{
+      position: relative;
+      text-align:center;
+  }
+ 
+
+    .container-data{
+        text-align: center;
+        padding: 20px 30px;
+    }
+    
+    .icons i{
+        border-radius:50%;
+    }
+
+    .more-btn{
+        position: relative;
+        left: 45%;
+        margin:10px 0;
+        padding:15px 30px;
+    }
+    .content{
+        padding-left:10rem;
+        padding-top:3em;
+    }
+    .content .btn{padding:5px;
+    margin-left:2px;}
+    .content input{
+    padding:4px;
+    margin-top:3px;}
+    footer h2{margin-bottom:1px;}
+
+    /* Media queries */
+    @media screen and (max-width:700px){
+    .content{
+        display: grid;
+        grid-template-columns:1fr;
+        margin:auto;
+        padding-right:10rem;
+        margin-left:-5rem;
+    
+    }
+    .btn{
+        position:absolute;
+        top:58px;
+        
+
+    }
+}
+@media only screen and (max-width:1023px){
+    .container-data img{
+        display: grid;
+        grid-template-columns:repeat(3, 1fr);
+        margin:auto;
+        padding-right:4rem;
+      }
+      
+@media only screen and (max-width:400px){
+    .btn{
+            position:absolute;
+            top:100%;
+            right:62%;
+        }
+    footer h3{
+        
+            padding-top:2rem;
+            font-size:14px;
+
+        }
+    .carrier{
+        display: grid;
+        grid-template-columns:1fr;
+        margin:auto;
+        padding-right:10rem;
+        margin-left:-2.5rem;
+    }
+}
