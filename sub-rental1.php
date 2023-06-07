@@ -78,7 +78,7 @@ include_once("admin/includes/db.php");
       while ($row = mysqli_fetch_assoc($sql)) {
         echo '<div class="col-lg-4 col-md-3 col-sm-12 my-1">';
         echo '<div class="card shadow">';
-        echo '<img src="admin/images/' . $row["IMAGES"] . '" class="card-img-top" alt="Hot Beverages" width="300px" height="200px">';
+        echo '<img src="admin/images/' . $row["IMAGES"] . '" class="card-img-top" alt="Ground Floor" width="300px" height="200px">';
         echo '<div class="card-body">';
         echo '<h6 class="card-title"><strong>' . $row['NAME_OF_FOOD'] . '</strong></h6>';
         echo '<p class="card-text">' . $row['DESCRIPTION'] . '</p><br>';

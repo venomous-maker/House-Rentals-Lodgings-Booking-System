@@ -1,5 +1,7 @@
 <?php 
   session_start();
+  require 'includes/cookies_gen.php';
+  $sess_id = get_onload_cookie();
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,7 +42,8 @@
                 </tr>
       <?php
           include_once 'admin/includes/db.php';
-          $stmt = $connect->prepare("SELECT * FROM cart");
+          $stmt = $connect->prepare("SELECT * FROM cart WHERE sess_id = ?");
+          $stmt->bind_param('s', $sess_id);
           $stmt->execute();
           $result = $stmt->get_result();
           $total = 0;
@@ -63,7 +66,7 @@
          	endwhile;
           ?>
          		<tr>
-                    <td align="center"><a href="meals.php" class="btn btn-success"><i class="fas fa-cart-plus"></i>&nbsp;&nbsp;Continue booking</a></td>
+                    <td align="center"><a href="rentals.php" class="btn btn-success"><i class="fas fa-cart-plus"></i>&nbsp;&nbsp;Continue booking</a></td>
                     <td colspan="2" align="center"><strong>Total</strong></td>
                     <td align="left"><strong>Ksh. <?php echo number_format($total, 2); ?></strong></td>
                      <td align="center"><a href="checkout.php" class="btn btn-info mx-2 <?= ($total > 1) ?"":"disabled" ?>"<i class="far fa-credit-card"></i>&nbsp;&nbsp;Book</a></td>

@@ -1,6 +1,8 @@
 <?php 
 	session_start();
 	require 'admin/includes/db.php';
+	require 'includes/cookies_gen.php';
+	$sess_id = get_onload_cookie();
 
 	if(isset($_POST['pid'])){
 		$pid = $_POST['pid'];
@@ -8,21 +10,20 @@
 		$pprice = $_POST['pprice'];
 		$pcode = $_POST['pcode'];
 		$pqty = 1;
-
-		$stmt = $connect->prepare("SELECT product_code FROM cart WHERE product_code=?");
-		$stmt->bind_param("s",$pcode);
+		
+		$stmt = $connect->prepare("SELECT product_code FROM cart WHERE product_code=? AND sess_id = ?");
+		$stmt->bind_param("ss",$pcode,$sess_id);
 		$stmt->execute();
 		$res = $stmt->get_result();
 		$r = $res->fetch_assoc();
-		$code = $r['product_code'];
 		
 		$validator = mysqli_query($connect,"SELECT * FROM orders WHERE products LIKE '%$pname%' AND status = 'confirmed'");
 		
 		if ($validator->num_rows<1){
 			
-			if(!$code){
-				$query = $connect->prepare("INSERT INTO cart(product_name,product_price,qty,total_price,product_code) VALUES 	(?,?,?,?,?)");
-				$query->bind_param("ssiss",$pname,$pprice,$pqty,$pprice,$pcode);
+			if(!$r){
+				$query = $connect->prepare("INSERT INTO cart(product_name,product_price,qty,total_price,product_code,sess_id) VALUES 	(?,?,?,?,?,?)");
+				$query->bind_param("ssisss",$pname,$pprice,$pqty,$pprice,$pcode, $sess_id);
 				$query->execute();
 					echo '<div class="alert alert-success alert-dismissible">
 						  <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -44,7 +45,8 @@
 	}
 
 	if (isset($_GET['cartItem']) && isset($_GET['cartItem']) == 'cart_item') {
-		$stmt  = $connect->prepare("SELECT * FROM cart");
+		$stmt  = $connect->prepare("SELECT * FROM cart WHERE sess_id = ?");
+		$stmt->bind_param("s", $sess_id);
 		$stmt->execute();
 		$stmt->store_result();
 		$rows = $stmt->num_rows;
@@ -65,7 +67,8 @@
 	}
 
 	if(isset($_GET['clear'])){
-		$stmt = $connect->prepare("DELETE FROM cart");
+		$stmt = $connect->prepare("DELETE FROM cart WHERE sess_id = ?");
+		$stmt->bind_param('s', $sess_id);
 		$stmt->execute();
 
 		$_SESSION['showAlert'] = 'block';
