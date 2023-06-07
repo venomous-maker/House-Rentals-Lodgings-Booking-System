@@ -117,8 +117,9 @@
 					</div>';
 
 		echo $data;
-
-		$stmt = $connect->prepare("DELETE FROM cart");
+		
+		$stmt = $connect->prepare("DELETE FROM cart WHERE sess_id = ?");
+		$stmt->bind_param('s', $sess_id);
 		$stmt->execute();
 	}
 ?>
